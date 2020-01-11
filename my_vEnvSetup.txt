@@ -1,0 +1,14 @@
+#notes/commands for setting up virtual environment
+rm -rf CS362-W2020/
+git clone https://github.com/wellheup/CS362-W2020.git
+cd CS362-W2020
+git checkout --track origin/wellheup-assignment-1
+pip install virtualenv
+virtualenv --version
+cd projects
+virtualenv dominion_vEnv
+source dominion_vEnv/bin/activate
+pip install --upgrade pip
+pip install pandas
+...
+deactivate

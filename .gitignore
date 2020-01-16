@@ -109,6 +109,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+## wellheup's personal vEnv
+projects/dominion_vEnv
 
 # Spyder project settings
 .spyderproject

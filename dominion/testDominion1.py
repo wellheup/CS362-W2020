@@ -31,10 +31,11 @@ supply = testUtility.GetSupplyCards(box)
 # The supply always has these cards
 supply = testUtility.AddDefaultSupplyCards(supply, nV, nC)
 
-# [BUG TEST] removing all province cards from the game for purchase
-supply["Estate"] = 0
-supply["Duchy"] = 0
-supply["Province"] = 0
+# [BUG TEST] reducing victory points Estate, Duchy, and Province to 0
+for pile in supply:
+    if pile == "Estate" or pile == "Duchy" or pile == "Province":
+        for card in supply[pile]:
+            card.vpoints=0
 # [END TEST]
 
 # initialize the trash
